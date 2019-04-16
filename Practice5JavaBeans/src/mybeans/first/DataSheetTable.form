@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="mybeans.first.DataSheetTable">
+  <grid id="27dc6" binding="rootPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+    <constraints>
+      <xy x="20" y="20" width="500" height="400"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <grid id="ce6f8" binding="panelButtons" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+        <constraints border-constraint="South"/>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="fba05" class="javax.swing.JButton" binding="addButton">
+            <constraints/>
+            <properties>
+              <text value="Add (+)"/>
+            </properties>
+          </component>
+          <component id="d0243" class="javax.swing.JButton" binding="delButton">
+            <constraints/>
+            <properties>
+              <text value="Del (-)"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <scrollpane id="e24c1" binding="scrollPane">
+        <constraints border-constraint="Center"/>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="dfaa6" class="javax.swing.JTable" binding="table">
+            <constraints/>
+            <properties/>
+          </component>
+        </children>
+      </scrollpane>
+    </children>
+  </grid>
+</form>
