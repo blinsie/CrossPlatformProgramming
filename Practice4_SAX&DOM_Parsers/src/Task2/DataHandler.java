@@ -15,7 +15,9 @@ import java.io.InputStream;
 public class DataHandler extends DefaultHandler {
 
     private boolean isX, isY;
-    private double sumX, sumY, sumX2, sumXY, t; private double k, b;
+    private double sumX, sumY, sumX2, sumXY, t;
+    private static double k;
+    private static double b;
     private int num;
 
     @Override
@@ -49,9 +51,11 @@ public class DataHandler extends DefaultHandler {
 
     @Override
     public void endElement(String uri, String localName, String qName) throws SAXException {
-        System.out.println("Конец обработки элемента: " + qName); if (qName.equals("x")) {
+        System.out.println("Конец обработки элемента: " + qName);
+        if (qName.equals("x")) {
             isX = false; num += 1;
-        } else if (qName.equals("y")) { isY = false;
+        } else if (qName.equals("y")) {
+            isY = false;
             t = 0;
             num += 1;
         }
@@ -59,8 +63,10 @@ public class DataHandler extends DefaultHandler {
 
     @Override
     public void characters(char[] ch, int start, int length) throws SAXException {
-        String str = new String(ch, start, length).trim(); if (str.trim().length() > 0)
-            System.out.println("\tЗначение: " + str); double tmp = 0;
+        String str = new String(ch, start, length).trim();
+        if (str.trim().length() > 0)
+            System.out.println("\tЗначение: " + str);
+        double tmp = 0;
         if (isX) {
             tmp = Double.parseDouble(str); sumX += tmp;
             sumX2 += tmp*tmp; t = tmp;
@@ -68,7 +74,16 @@ public class DataHandler extends DefaultHandler {
             tmp = Double.parseDouble(str); sumY += tmp;
             t = t * tmp; sumXY += t;
         }
+    }
 
+    public static double getCopyK () {
+        double new_k = k;
+        return new_k;
+    }
+
+    public static double getCopyB () {
+        double new_b = b;
+        return new_b;
     }
 
     public static void main(String[] args) throws FileNotFoundException {

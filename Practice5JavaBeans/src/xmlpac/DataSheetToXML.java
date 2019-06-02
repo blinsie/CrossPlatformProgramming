@@ -22,7 +22,8 @@ public class DataSheetToXML {
         try {
             transformer = transformerFactory.newTransformer();
             transformer.setOutputProperty(OutputKeys.ENCODING,
-                    "Windows-1251"); transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+                    "Windows-1251");
+            transformer.setOutputProperty(OutputKeys.INDENT, "yes");
             transformer.setOutputProperty(
                     "{http://xml.apache.org/xslt}indent-amount", "4");
             DOMSource source = new DOMSource((Node) doc);

@@ -3,8 +3,8 @@
     <CLASSES />
     <JAVADOC />
     <SOURCES>
-      <root url="file://$PROJECT_DIR$/../../Libraries/xerces-2_12_0/samples" />
-      <root url="file://$PROJECT_DIR$/../../Libraries/xerces-2_12_0/src" />
+      <root url="file://D:/other/Универ/2 курс/ООП/Libraries/xerces-2_12_0/samples" />
+      <root url="file://D:/other/Универ/2 курс/ООП/Libraries/xerces-2_12_0/src" />
     </SOURCES>
   </library>
 </component>
